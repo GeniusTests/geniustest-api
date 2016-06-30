@@ -1,0 +1,14 @@
+# Example config file for the Schema Generator
+# Use the following command to regenerate entities:
+# bin/schema generate-types src/ app/config/schema.yml
+
+types:
+
+namespaces:
+  entity: AppBundle\Entity
+
+annotationGenerators:
+    - ApiPlatform\SchemaGenerator\AnnotationGenerator\PhpDocAnnotationGenerator
+    - ApiPlatform\SchemaGenerator\AnnotationGenerator\DoctrineOrmAnnotationGenerator
+    - ApiPlatform\SchemaGenerator\AnnotationGenerator\ConstraintAnnotationGenerator
+    - ApiPlatform\SchemaGenerator\AnnotationGenerator\ApiPlatformCoreAnnotationGenerator
